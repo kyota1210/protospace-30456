@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :show
   before_action :config_permitted_paramerters, if: :devise_controller?
 
   def config_permitted_paramerters
